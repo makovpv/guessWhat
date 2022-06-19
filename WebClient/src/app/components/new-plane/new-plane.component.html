@@ -1,0 +1,11 @@
+<p>new-plane works!</p>
+
+<label>Plane</label>
+
+<input type="text" [(ngModel)]="planeName">
+
+<input type="file" (change)="boo($event)" accept=".jpg,.png"/>
+
+<button (click)="foo($event)">Upload</button>
+
+<app-feature-view></app-feature-view>

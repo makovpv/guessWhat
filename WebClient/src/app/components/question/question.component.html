@@ -1,0 +1,14 @@
+<p>question works!</p>
+
+
+<img [src]="imageUrl" width="600">
+
+<button (click)="zoo($event)">Get Question</button>
+
+<div>
+    <ul>
+        <li *ngFor="let x of options" value="x">{{x}}</li>
+    </ul>
+    
+    <!-- <label style="display: block;" *ngFor="let x of options">{{x}}</label> -->
+</div>
