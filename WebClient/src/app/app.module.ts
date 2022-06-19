@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewPlaneComponent } from './components/new-plane/new-plane.component';
 import { QuestionComponent } from './components/question/question.component';
-import { MyFeatureModule } from './feature/my-feature/my-feature.module';
 
 @NgModule({
   declarations: [
@@ -19,15 +18,9 @@ import { MyFeatureModule } from './feature/my-feature/my-feature.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    MyFeatureModule
+    FormsModule
   ],
-  providers: [
-    // {
-    //   provide: UrlSerializer,
-    //   useClass: LowerCaseUrlSerializer
-    // }
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

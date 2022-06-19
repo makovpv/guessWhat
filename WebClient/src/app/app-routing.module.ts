@@ -6,6 +6,10 @@ import { QuestionComponent } from './components/question/question.component';
 const routes: Routes = [
   { path: 'new', component: NewPlaneComponent },
   { path: 'question', component: QuestionComponent },
+  { 
+    path: 'feature',
+    loadChildren: () => import('./feature/my-feature/my-feature.module').then(m => m.MyFeatureModule)
+  },
   { path: '', component: QuestionComponent }
 ];
 
