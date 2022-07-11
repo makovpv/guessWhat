@@ -22,5 +22,14 @@ namespace WebApplicationApi.Controllers
 
 			return Ok();
 		}
+
+		[HttpGet("{currentAirportCode}/{distance}/{priorAirportCode}")]
+		public ActionResult<string> GetDestinationAirportCode(string currentAirportCode, string priorAirportCode, int distance)
+		{
+
+			var code = _airportService.GetDestinationAirportCode(priorAirportCode, distance);
+
+			return Ok(code);
+		}
 	}
 }

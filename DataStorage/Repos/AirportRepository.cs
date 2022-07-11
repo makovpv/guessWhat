@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,15 @@ namespace DataStorage.Repos
 	{
 		private const int _earthRaduis = 6372795;
 		private const int _nauticalMile = 1852;
-		private const int _minDistance = 100;
+		private readonly int _minDistance;
 
 		private readonly ILogger<AirportRepository> _logger;
 
-		public AirportRepository(ILogger<AirportRepository> logger)
+		public AirportRepository(ILogger<AirportRepository> logger, IConfiguration configuration)
 		{
 			_logger = logger;
+
+			_minDistance = Convert.ToInt32(configuration.GetSection("MyAppData")["minDistance"]);
 		}
 
 		public void LogToConsole()

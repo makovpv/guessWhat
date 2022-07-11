@@ -11,7 +11,7 @@ namespace WebApplicationApi.Services
 		{
 			_airportRepository = airportRepository;
 			_logger = logger;
-	}
+		}
 
 		public async Task BuildGraphAsync(int distance)
 		{
